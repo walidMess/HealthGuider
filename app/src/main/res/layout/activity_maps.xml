@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.DrawerLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawerLayout">
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.healthyguider.healthguider.MapsActivity">
+
+
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        map:cameraZoom="14"
+        tools:context="com.healthyguider.healthguider.MapsActivity" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycleView"
+        android:layout_width="match_parent"
+        android:layout_height="274dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:background="#FAFAFA"
+
+        android:visibility="visible">
+
+    </android.support.v7.widget.RecyclerView>
+
+
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="18dp"
+        android:gravity="top"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+
+        <ImageButton
+            android:id="@+id/SearchButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:src="@drawable/ic_search_black_24dp"
+          />
+
+        <AutoCompleteTextView
+            android:id="@+id/autoCompleteTextView"
+            android:layout_width="300dp"
+       
+            android:layout_height="match_parent"
+
+
+            android:background="@color/white"/>
+
+        <ImageButton
+            android:id="@+id/ClearButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:src="@drawable/ic_clear_black_24dp"
+            />
+
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/LocateMe"
+
+
+        android:layout_width="45dp"
+
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="188dp"
+        android:background="@drawable/circle"
+        android:paddingTop="7dp"
+        android:src="@drawable/ic_gps_fixed_black_24dp"
+        android:textColor="#fff" />
+
+    <ImageButton
+        android:id="@+id/ChartsButton"
+
+
+        android:layout_width="45dp"
+
+        android:layout_height="40dp"
+
+
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/LocateMe"
+        android:background="@drawable/circle"
+        android:paddingTop="7dp"
+        android:src="@drawable/charts"
+        android:textColor="#fff" />
+
+    <Switch
+        android:id="@+id/switchResultList"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:shadowColor="@color/cardview_dark_background"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:background="@null" />
+
+
+</RelativeLayout>
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/navView"
+        android:layout_width="150dp"
+        android:layout_height="match_parent"
+        app:menu="@menu/sidemenu"
+        android:layout_gravity="start"
+        android:background="@color/cardview_dark_background"
+        app:itemTextColor="@color/lightorange"
+        app:itemIconTint="@color/lightdarkorange"
+        >
+
+
+    </android.support.design.widget.NavigationView>
+</android.support.v4.widget.DrawerLayout>

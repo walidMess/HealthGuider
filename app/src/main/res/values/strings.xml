@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">HealthGuider</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="settings">Settings</string>
+
+    <string name="textwarn">Permission Mandatory for this App</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="title_activity_view_demands">ViewDemands</string>
+    <string name="CONTINUE">CONTINUE</string>
+</resources>
